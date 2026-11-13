@@ -35,14 +35,39 @@ The research evaluates insurability, potential adverse selection, moral hazard, 
 
 As a member of the project team, I contributed to questionnaire design, market-demand analysis, the review of incidence and medical-cost sources, and research supporting actuarial pricing assumptions. This repository presents the collaborative project's findings while distinguishing my individual contributions.
 
-## Planned technical extensions
+## Technical extension (implemented)
 
-- Reproduce an **illustrative** premium calculation in Python using synthetic or appropriately licensed public data;
-- Visualize assumptions and projected covered claim costs;
-- Perform sensitivity analysis on claim frequency, reimbursement rate, and medical-cost trend; and
-- Document model assumptions, limitations, and reproducibility instructions.
+The notebook [`experience_frequency_pricing.ipynb`](experience_frequency_pricing.ipynb) reproduces the report's pricing formula in Python using **synthetic data**:
 
-These extensions are **planned**, not yet implemented.
+- Implements the literal bounded-range form of the experience-frequency formula, with input validation;
+- Checks the arithmetic against a small hand-calculated example;
+- Runs a sensitivity analysis on reimbursement rate (α) and medical-cost trend (γ), with a chart; and
+- Compares the literal formula with an alternative "capped expense basis" reading of the upper limit.
+
+With the illustrative assumptions (10,000 insured, 10% event rate, CNY 1,500 deductible, CNY 25,000 limit, 80% reimbursement, 5% trend), the adjusted expected covered cost is about **CNY 703 per insured per year** (about CNY 779 under the alternative reading). These figures come from invented inputs and are **not** premium estimates.
+
+Formula definitions, assumptions and open interpretation questions are documented in [`PRICING_METHODOLOGY.md`](PRICING_METHODOLOGY.md).
+
+**Still to do:** calibrate claim frequency and costs with appropriately licensed public data, and add sensitivity on claim frequency.
+
+## Repository structure
+
+| File | Contents |
+| --- | --- |
+| `README.md` | Project overview |
+| `PRICING_METHODOLOGY.md` | Pricing formula, parameter definitions, assumptions and limitations |
+| `experience_frequency_pricing.ipynb` | Python implementation with synthetic data and sensitivity analysis |
+| `Original_Chinese_Report.pdf` | Original collaborative report (Chinese) |
+| `requirements.txt` | Python dependencies |
+
+## How to run
+
+```bash
+pip install -r requirements.txt
+jupyter notebook experience_frequency_pricing.ipynb
+```
+
+The random seed is fixed (`2024`), so results are reproducible.
 
 ## Source report and attribution
 
