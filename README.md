@@ -75,7 +75,7 @@ The random seed is fixed (`2024`), so results are reproducible.
 Original research title: **“蓝天妈咪护盾”——产后抑郁症保险**  
 English working title: **Blue Sky Mommy Shield — Postpartum Depression Insurance**
 
-The underlying report was submitted to the **15th China Risk Management and Actuarial Forum (第十五届中国风险管理与精算论坛)** and was jointly prepared by **Xu Ziru, Chen Yang, and Yu Jiahui**, with academic supervision. The original report is written in Chinese. Any publication of the full document, figures, or underlying survey data should respect team, institutional, publisher, and participant permissions.
+The underlying report was submitted to the **15th China Risk Management and Actuarial Forum (第十五届中国风险管理与精算论坛)** and was jointly prepared by **Xu Ziru, Chen Yang, and Yu Jiahui**, with academic supervision. The original report is written in Chinese and is included here as [`Original_Chinese_Report.pdf`](Original_Chinese_Report.pdf) with the team's permission. Underlying survey responses are not published.
 
 ## Limitations and disclaimer
 
